@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Fluid Density: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:padding="10dp"
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"/>
+
+        <EditText
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:id="@+id/mix_fluids_density"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:ems="8"/>
+
+        <TextView
+            android:gravity="center"
+            android:text="ppg"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:padding="10dp"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:text="Fluid Volume: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:padding="10dp"
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"/>
+
+        <EditText
+            android:textAlignment="textEnd"
+            android:layout_gravity="end"
+            android:id="@+id/mix_fluids_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:ems="8"/>
+
+        <TextView
+            android:gravity="center"
+            android:text="bbl"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:padding="10dp"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/textColor"/>
+
+    </GridLayout>
+
+</LinearLayout>

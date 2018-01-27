@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">Mud Balance 2.0</string>
+    <string name="weight_up">Weight Up Mud</string>
+    <string name="mix_fluids">Fluid Mixer</string>
+    <string name="cut_mud">Cut mud weight</string>
+    <string name="slug">Slug Calculation</string>
+    <string-array name="weighting_agents">
+        <item>Barite 4.2</item>
+        <item>Barite 4.1</item>
+        <item>CaCO3</item>
+        <item>NaCl</item>
+        <item>NaBr</item>
+    </string-array>
+    <string name="zero">0.00</string>
+    <string name="btn_calc">Calculate</string>
+    <string name="btn_clear">Clear</string>
+
+    <string name="menu_units">Units</string>
+
+    <string-array name="number_of_fluids">
+        <item name="two">2</item>
+        <item name="three">3</item>
+        <item name="four">4</item>
+    </string-array>
+
+    <string name="sg">SG</string>
+    <string name="ppg">ppg</string>
+    <string name="m3">m3</string>
+    <string name="bbl">bbl</string>
+    <string name="density">Density</string>
+    <string name="volume">Volume</string>
+    <string name="fluid_density">Fluid Density</string>
+    <string name="fluid_volume">Fluid Volume</string>
+    <string name="current_mud_weight">Current Mud Weight</string>
+    <string name="slug_mud_weight">Slug Mud Weight</string>
+    <string name="dry_pipe_length">Dry Pipe Length</string>
+    <string name="drill_pipe_id">Drill Pipe ID</string>
+    <string name="slug_volume_required">Slug Volume Required</string>
+    <string name="bbl_ft">bbl/ft</string>
+    <string name="ft">ft</string>
+    <string name="calculate_for_known_slug_weight">Volume of Slug</string>
+    <string name="slug_volume">Slug Volume</string>
+    <string name="required_slug_weight">Required Slug Weight</string>
+    <string name="number_of_fluids_to_mix">Number of fluids to mix</string>
+    <string name="current_fluid_density">Current Fluid Density</string>
+    <string name="current_fluid_volume">Current Fluid Volume</string>
+    <string name="enter_lighter_fluid_name">Enter Lighter Fluid Name</string>
+    <string name="lighter_fluid_density">Lighter Fluid Density</string>
+    <string name="final_cm_fluid_density">Final Fluid Density</string>
+    <string name="lighter_cm_fluid_volume">Lighter Fluid Volume</string>
+    <string name="final_cm_fluid_volume">Final Fluid Volume</string>
+    <string name="lbpergal">Pound per gallon</string>
+    <string name="kgpl">Kilogram per liter</string>
+    <string name="pound_per_cubic_foot">Pound per cubic foot</string>
+    <string name="kgl">kg/l</string>
+    <string name="lbft3">lb/ft3</string>
+    <string name="kgm3">kg/m3</string>
+    <string name="kilogram_per_cubit_meter">Kilogram per cubic meter</string>
+    <string name="specific_gravity">Specific Gravity</string>
+    <string name="oil_barrel">Oil Barrel</string>
+    <string name="cubic_foot">Cubic Foot</string>
+    <string name="ft3">ft3</string>
+    <string name="gallon">Gallon</string>
+    <string name="gal">gal</string>
+    <string name="cubic_meter">Cubic meter</string>
+    <string name="liter">Liter</string>
+    <string name="l">l</string>
+    <string name="convert_from">Convert From:</string>
+    <string name="kilogram">Kilogram</string>
+    <string name="kg">kg</string>
+    <string name="pound">Pound</string>
+    <string name="lb">lb</string>
+    <string name="gram">Gram</string>
+    <string name="g">g</string>
+    <string name="metric_ton">Metric ton</string>
+    <string name="ton">ton</string>
+    <string name="ounce">Ounce</string>
+    <string name="oz">oz.</string>
+    <string name="carat">Carat</string>
+    <string name="cd">cd</string>
+    <string name="weighting_material">Weighting Material</string>
+    <string name="initial_mud_weight">Initial Mud Weight</string>
+    <string name="initial_volume">Initial Volume</string>
+    <string name="desired_mud_weight">Desired Mud Weight</string>
+    <string name="material_needed">Material needed</string>
+    <string name="volume_increase">Volume Increase</string>
+    <string name="total_volume">Total Volume</string>
+    <string name="sacks_size">Sacks Size</string>
+    <string name="kg_sack">kg/sack</string>
+    <string name="sacks_amount">Sacks Amount</string>
+    <string name="sacks">sacks</string>
+
+    <string-array name="lighter_fluid">
+        <item name="water">Water</item>
+        <item name="diesel">Diesel</item>
+        <item name="other">Other</item>
+    </string-array>
+
+    <string-array name="densities">
+        <item name="ppg">Pound per gallon, ppg</item>
+        <item name="lbft3">Pound per cubic foot, lb/ft3</item>
+        <item name="kgl">Kilogram per liter, kg/l</item>
+        <item name="kgm3">Kilogram per cubic meter, kg/m3</item>
+        <item name="sg">Specific Gravity, SG</item>
+    </string-array>
+
+    <string-array name="volumes">
+        <item name="bbl">Oil Barrel, bbl</item>
+        <item name="ft3">Cubic Foot, ft3</item>
+        <item name="gal">Gallon, gal</item>
+        <item name="l">Liter, l</item>
+        <item name="m3">Cubic meter, m3</item>
+    </string-array>
+
+    <string-array name="masses">
+        <item name="kg">Kilogram, kg</item>
+        <item name="lb">Pound, lb</item>
+        <item name="g">Gram, g</item>
+        <item name="ton">Metric ton, ton</item>
+        <item name="oz">Ounce, oz.</item>
+        <item name="cd">Carat, cd</item>
+    </string-array>
+
+    <string name="alert_box">Using this application you agree that you are using it at your own risk and you
+
+understand that. If something happens like getting run off location, you lose your job
+
+or something else I am not to blame since you could always calculate everything by
+
+yourself.\nIf you agree to above please hit okay and please rate app if you feel like it!
+
+Thanks!</string>
+    <string name="volume_displaced_by_slug">Volume Displaced by Slug</string>
+    <string name="weight_of_slug">Weight of Slug</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="other_apps">Other Apps</string>
+    <string name="about_app">About App</string>
+
+    <string name="about">The main goal of creation and development of Oilfield Apps is to help fellow oilfield people in their everyday struggle to do their best job. As we all know sometimes things on rig site can go wrong and during those stressful situations looking for the equation or calculating something on paper can be painful. That is the reason behind Oilfield Apps to provide best mobile apps in the industry.\n\n
+
+In past few years, I have been using may excel files or other simple calculator written by myself or that I obtained from friends and co-workers. They were the great help to me and many of my friends, however over the time I collected too many of them and decided that if would be helpful to everyone if someone would just write nice and simple mobile apps as we all already have smartphones. At first, I created all that for myself but shortly after I decided to give it to the world since they never failed me and I became very confident with them.\n\n
+
+During development of every calculating algorithm, I have crosschecked it with every possible excel file or another calculator out there to make sure that it is working right and will cause no problem to anyone. \n\n
+
+However, I cannot guarantee that everything is and always will be perfect and correct especially that different companies use slightly different factors to calculate (different number rounding of numbers etc.). That being said I did my best to unify all of those factors since they are all very close to each other. I was able to achieve differences between my apps and other calculators (or excel files) in the range of 0-0.5% which is I believe extremely close. \n\n
+
+If you find any miscalculations or you believe that difference between what you are using and those apps is significant or you have the suggestion about some improvements please feel free to leave the comment under application or drop me an e-mail.\n\n
+
+Last but not least: I have created those apps in order to help and to provide support for all Oilfield people spread around the world. Please note that as much confidence and faith as I have in those apps I cannot be blamed for your failure or problems because You have been using those apps and not your company or Customer recommended apps. I hope one-day Oilfield Apps will earn approval from biggest Oilfield companies out there and maybe some certification. For now, you are using those apps at your own risk.
+</string>
+    <string name="in">in</string>
+
+    <string name="appID_dummy">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="unitID_dummy">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="appId">ca-app-pub-9330384453784359~1455576461</string>
+    <string name="unitId">ca-app-pub-9330384453784359/8567779726</string>
+    <string name="description_image">Image</string>
+
+</resources>

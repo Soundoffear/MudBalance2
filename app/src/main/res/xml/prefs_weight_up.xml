@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ListPreference
+        android:entries="@array/density_units"
+        android:entryValues="@array/density_units"
+        android:key="MUD_DENSITY_UNITS"
+        android:summary="Units for mud density (mud weight)"
+        android:title="Mud Density Units" />
+
+    <ListPreference
+        android:entries="@array/volume_units"
+        android:entryValues="@array/volume_units"
+        android:key="MUD_VOLUME_UNITS"
+        android:summary="Units for volume"
+        android:title="Volume Units" />
+
+    <ListPreference
+        android:entries="@array/weight_units"
+        android:entryValues="@array/weight_units"
+        android:key="WEIGHT_UNITS"
+        android:summary="Units for weight of material needed"
+        android:title="Weight Units" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="SACKS_CALCULATOR"
+        android:summary="Calculates number of sacks required"
+        android:title="Sacks calculator" />
+
+    <ListPreference
+        android:dependency="SACKS_CALCULATOR"
+        android:entries="@array/sacks_units"
+        android:entryValues="@array/sacks_units"
+        android:key="SACKS_UNIT"
+        android:summary="Specifies if you will mix sacks, big bags etc."
+        android:title="Sacks Unit" />
+
+
+</PreferenceScreen>

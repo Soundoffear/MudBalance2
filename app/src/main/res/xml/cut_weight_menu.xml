@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:title="Mud Density Units"
+        android:summary="Units for mud density (mud weight)"
+        android:key="CUT_MUD_DENSITY_UNITS"
+        android:entries="@array/density_units"
+        android:entryValues="@array/density_units"/>
+
+    <ListPreference
+        android:title="Volume Units"
+        android:summary="Units for volume"
+        android:key="CUT_MUD_VOLUME_UNITS"
+        android:entries="@array/volume_units"
+        android:entryValues="@array/volume_units"/>
+
+</PreferenceScreen>

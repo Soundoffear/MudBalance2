@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:title="Density Units"
+        android:summary="Select your density units"
+        android:key="SLUG_DENSITY_UNITS"
+        android:entries="@array/density_units"
+        android:entryValues="@array/density_units"/>
+    <ListPreference
+        android:title="Length Units"
+        android:summary="Select your length units"
+        android:key="SLUG_LENGTH_UNITS"
+        android:entries="@array/length_units"
+        android:entryValues="@array/length_units"/>
+
+    <ListPreference
+        android:title="Drill Pipe ID"
+        android:summary="Select your drill pipe id units"
+        android:key="SLUG_DRILL_PIPE_ID"
+        android:entries="@array/diameter_liner_entry"
+        android:entryValues="@array/diameter_liner_entry"/>
+
+    <ListPreference
+        android:title="Volume Units"
+        android:summary="Select your volume units"
+        android:key="SLUG_VOLUME_UNITS"
+        android:entries="@array/volume_units"
+        android:entryValues="@array/volume_units" />
+
+    <CheckBoxPreference
+        android:title="Calculate Slug Back Flow"
+        android:summary="Calculates volume of fluid displaced by slug volume and empty pipe"
+        android:key="SLUG_BACK_FLOW"
+        android:defaultValue="false"
+        />
+
+
+</PreferenceScreen>

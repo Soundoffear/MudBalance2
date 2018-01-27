@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="density_units">
+        <item name="sg">SG</item>
+        <item name="ppg">ppg</item>
+        <item name="lbft">lb/ft3</item>
+        <item name="kgm">kg/m3</item>
+        <item name="kgl">kg/l</item>
+    </string-array>
+
+    <string-array name="volume_units">
+        <item name="m3">m3</item>
+        <item name="bbl">bbl</item>
+        <item name="ft3">ft3</item>
+        <item name="liters">l</item>
+        <item name="gallons">gal</item>
+    </string-array>
+
+    <string-array name="weight_units">
+        <item name="kilograms">kg</item>
+        <item name="pounds">lb</item>
+        <item name="metricTons">MT</item>
+    </string-array>
+
+    <string-array name="sacks_units">
+        <item name="lbsacks">lb/sack</item>
+        <item name="kgsacks">kg/sack</item>
+        <item name="tonbb">big bags</item>
+    </string-array>
+
+    <string-array name="capacity_units">
+        <item name="bblft">bbl/ft</item>
+        <item name="bblm">bbl/m</item>
+        <item name="m3ft">m3/ft</item>
+        <item name="m3m">m3/m</item>
+        <item name="lm">l/m</item>
+    </string-array>
+
+    <string-array name="length_units">
+        <item name="ft">ft</item>
+        <item name="m">m</item>
+    </string-array>
+
+    <string-array name="diameter_liner_entry">
+        <item>in</item>
+        <item>mm</item>
+        <item>cm</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_centerHorizontal="false"
+    android:layout_centerInParent="false"
+    android:layout_centerVertical="false"
+    android:layout_gravity="center"
+    android:background="@color/colorBackground"
+    android:gravity="center_horizontal"
+    tools:context="com.oilfieldapps.allspark.gridlayoutlearning.MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/btn_weight_up"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:background="#0000"
+            android:padding="10dp"
+            android:src="@drawable/weight_up"
+            android:contentDescription="@string/description_image" />
+
+        <ImageButton
+            android:id="@+id/btn_mix_fluids"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:background="#0000"
+            android:padding="10dp"
+            android:src="@drawable/mix_fluids"
+            android:contentDescription="@string/description_image" />
+
+        <ImageButton
+            android:id="@+id/btn_cut_mudWeight"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="#0000"
+            android:padding="10dp"
+            android:src="@drawable/cut_weight"
+            android:contentDescription="@string/description_image" />
+
+        <ImageButton
+            android:id="@+id/btn_slug"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:background="#0000"
+            android:padding="10dp"
+            android:src="@drawable/slug_calc"
+            android:contentDescription="@string/description_image" />
+
+        <ImageButton
+            android:id="@+id/btn_converter"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:background="#0000"
+            android:padding="10dp"
+            android:src="@drawable/converter"
+            android:contentDescription="@string/description_image" />
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/gridLayout"
+        android:layout_alignEnd="@+id/gridLayout"
+        android:layout_alignRight="@+id/gridLayout"
+        android:layout_alignLeft="@+id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/gridLayout"
+        style="?android:attr/buttonBarStyle">
+        <Button
+            android:id="@+id/mud_balance_rateUs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_us"
+            android:textSize="@dimen/textSize"
+            android:textAlignment="center"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:id="@+id/mud_balance_otherApps"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/other_apps"
+            android:textAlignment="center"
+            android:textSize="@dimen/textSize"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/mud_balance_main_adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/unitId">
+
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

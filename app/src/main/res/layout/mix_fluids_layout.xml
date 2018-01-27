@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mix_fluids_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
+    <ScrollView
+        android:id="@+id/mix_fluids_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mix_fluids_toolbar"
+        android:layout_above="@+id/mix_fluids_adView"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_row="0"
+                        android:padding="5dp"
+                        android:text="@string/density"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <RadioGroup
+                        android:id="@+id/density_unit_radio"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_row="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/density_radio_sg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/sg" />
+
+                        <RadioButton
+                            android:id="@+id/density_radio_ppg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/ppg" />
+                    </RadioGroup>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_row="0"
+                        android:padding="5dp"
+                        android:text="@string/volume"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <RadioGroup
+                        android:id="@+id/volume_unit_radio"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:layout_row="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/volume_radio_m3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/m3" />
+
+                        <RadioButton
+                            android:id="@+id/volume_radio_bbl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/bbl" />
+                    </RadioGroup>
+
+                </GridLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/number_of_fluids_to_mix"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <Spinner
+                    android:id="@+id/spinner_number_of_fluids"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:entries="@array/number_of_fluids"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/grid_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/fluid_density"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/density1"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/density1_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/sg"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/fluid_volume"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/volume1"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/volume1_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/m3"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/grid_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/fluid_density"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/density2"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/density2_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/sg"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/fluid_volume"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/volume2"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/volume2_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/m3"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/grid_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/fluid_density"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/density3"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/density3_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/sg"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/fluid_volume"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/volume3"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/volume3_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/m3"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/grid_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/fluid_density"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/density4"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="0"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/density4_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="0"
+                    android:padding="5dp"
+                    android:text="@string/sg"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/fluid_volume"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/volume4"
+                    android:layout_column="1"
+                    android:layout_gravity="end"
+                    android:layout_row="1"
+                    android:ems="7"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/volume4_units"
+                    android:layout_column="2"
+                    android:layout_gravity="start"
+                    android:layout_row="1"
+                    android:padding="5dp"
+                    android:text="@string/m3"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/textSize" />
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/fluid_mix_clear_data"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_clear" />
+
+                <Button
+                    android:id="@+id/fluid_mix_calculate"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_calc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:text="@string/final_cm_fluid_density"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <TextView
+                        android:id="@+id/output_final_density"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:text="@string/zero"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <TextView
+                        android:id="@+id/units_final_density"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/sg"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:text="@string/final_cm_fluid_volume"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <TextView
+                        android:id="@+id/output_final_volume"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:text="@string/zero"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+
+                    <TextView
+                        android:id="@+id/units_final_volume"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:text="@string/m3"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/mix_fluids_adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/unitId" />
+
+</RelativeLayout>
